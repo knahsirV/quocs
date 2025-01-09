@@ -2,10 +2,18 @@
   "name": "quocs",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build": "bun build ./src/cli.ts --outdir ./dist --target node",
+    "dev": "bun run src/cli.ts",
+    "prepublish": "bun run build"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^13.0.0"
   }
 }
